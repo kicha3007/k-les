@@ -1,0 +1,56 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width", initial-scale=1)
+        title Stroy garant
+        link(rel="stylesheet" type="text/css" href="static/css/jquery.fancybox.css" )
+        link(rel="stylesheet" type="text/css" href="static/css/owl.carousel.min.css" )
+        link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet")
+        link(href='images/favicon.png', rel='icon', sizes='32x32', type='image/png')
+        link(rel="stylesheet" type="text/css" href="static/css/main.css" )
+
+    body
+        .it-main-page__wrapper
+            .it-main-page__content
+                include header.pug
+                include main-offer
+                .it-all-title Особенности ремонта со «Строй Гарант»
+                include advantages
+                .it-all-title Заказали ремонт? Выбирайте подарок!
+                include gift
+                .it-all-title Примеры выполненных работ
+                include example
+                .it-all-title Каждую неделю предоставляем фото и видео отчет
+                include report
+                .it-all-title Цены на ремонт коттеджей в Тюмени
+                include repairs
+                .it-all-title К вашим услугам команда профессионалов
+                include foreman
+                .it-all-title   Сэкономим для вас на покупке материалов
+                .it-all-subtitle   До 30% от стоимости в ведущих строительных магазинах
+                include partners
+                .it-all-subtitle
+                    |   В среднем ваша выгода при ремонте коттеджа
+                    br
+                    |  составляет
+                    b
+                        |   от 200 000 рублей
+                include example_bottom
+                .it-all-title   Поэтапная схема работы и оплаты
+                include scheme
+                include main-offer-2
+                .it-all-title   Лично контролируем процесс и результат работы
+                include foreman_second
+                .it-all-title   Как нас найти:
+                include contacts
+        include footer
+        include modal
+
+
+
+        script(src='static/js/jquery.min.js', type='text/javascript')
+        script(src='static/js/jquery.fancybox.js', type='text/javascript')
+        script(src='static/js/jquery.maskedinput.min.js', type='text/javascript')
+        script(src='static/js/owl.carousel.min.js', type='text/javascript')
+        script(src='static/js/main.js', type='text/javascript')
