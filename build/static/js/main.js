@@ -108,6 +108,52 @@ $(function () {
     });
 
 
+    /* ------------------- switcher ------------------- */
+
+    (function () {
+
+        var tabButton = $("[data-switch]");
+
+        tabButton.on("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            $(this).closest("[data-switch-wrap]").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+
+            var target = $(this).data("switch");
+
+            var dataTabValue = ("[data-tab='" + target + "']");
+
+            $(dataTabValue).closest("[data-tabs-wrap]").find(".active").removeClass("active");
+
+            var dataValue = $(dataTabValue).addClass("active");
+
+            var pos = $(dataValue).position();
+//                    window.scrollTo(pos);
+
+//                $('html, body').animate({ scrollTop: croll_el.offset().top }, 500);
+
+        });
+
+    }());
+
+    /* ------------------- показываем выпадающее меню в табах ------------------- */
+
+
+    $("[data-min-nav]").on("click", function () {
+        $("[data-min-nav-dropdown]").toggle();
+    });
+
+    $("[data-min-nav-item]").on("click", function () {
+        var minNavItemVal = $(this).text();
+        console.log(minNavItemVal);
+        $("[data-min-nav-title]").text(minNavItemVal);
+        $("[data-min-nav-dropdown]").hide();
+
+    })
+
+
 
 
 });

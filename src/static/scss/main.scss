@@ -1,20 +1,9 @@
 @import '__vars';
-@import 'main-offer';
-@import 'advantages';
-@import 'catalog';
-@import 'contacts';
-@import 'modal';
-@import 'gift';
-@import 'example';
-@import 'report';
-@import 'repairs';
-@import 'foreman';
-@import 'partners';
-@import 'scheme';
-@import 'main-offer-2';
-@import 'footer';
-@import 'header';
-@import 'callback';
+@import '__mixins';
+@import 'card';
+@import "smart-grid";
+@import "othter-progects";
+
 
 /******************* it-all-style *******************/
 
@@ -43,7 +32,7 @@ body * {
 }
 
 .it-container {
-  max-width: 1170px;
+  max-width: 1180px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
@@ -51,6 +40,8 @@ body * {
     padding: 0 15px;
   }
 }
+
+
 
 //.it-container--big {
 //  max-width: 1920px;
@@ -137,6 +128,27 @@ body * {
   height: 103px;
 }
 
+.it-main-page__top {
+  @include row-flex();
+
+}
+
+.it-main-page__left {
+  @include col();
+  @include size(9);
+  @include size-md(12);
+
+
+}
+
+.it-main-page__right {
+  @include col();
+  @include size(3);
+  @include size-md(12);
+  padding-top: 60px;
+
+}
+
 .it-btn {
   display: inline-block;
   vertical-align: middle;
@@ -150,22 +162,18 @@ body * {
   font-size: 14px;
   transition: all 0.2s ease-in-out;
   background-color: $main-color;
-  color: rgba(31, 31, 31, 1);
+  color: #ffffff;
   text-transform: none;
   cursor: pointer;
-  border-radius: 5px;
   text-decoration: none;
 }
 
-.it-btn:hover {
-  background-color: $main-color-hover;
-}
 
 .it-btn:hover,
 .it-btn:active,
 .it-btn:visited {
   text-decoration: none;
-  color: rgba(31, 31, 31, 1);
+  color: #ffffff;
 }
 
 .it-btn--transparent {
@@ -178,11 +186,13 @@ body * {
   border: 1px solid $main-color-hover;
 }
 
-//.it-btn--transparent:hover,
-//.it-btn--transparent:active,
-//.it-btn--transparent:visited {
-//  color: rgba(0, 0, 0, 1);
-//}
+.it-btn--transparent:hover,
+.it-btn--transparent:active,
+.it-btn--transparent:visited {
+  color: rgba(0, 0, 0, 1);
+}
+
+
 
 /******************* media *******************/
 
