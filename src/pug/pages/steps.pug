@@ -1,0 +1,139 @@
+// --------------------- it-calculation -------------------------
+section.it-calculation.it-all--indent
+	.it-container
+		h2.it-all-title
+			| Расчет стоимости электростанции
+		.it-calculation__wrap
+			.it-calculation__item
+				.it-calculation__step-numeric
+					span(data-it-step-numeric='') 25
+					| %
+				.it-calculation__step-line
+					.it-calculation__line-inner(data-it-line-inner='')
+				.it-calculation__step
+					| Шаг
+					span.it-calculation__step-number(data-it-step-counter='') 1
+				form.it-calculation__form.it-form--hide(action='/sendCallBack.php', data-it-form='')
+					.it-calculation__inner-wrap
+						.it-calculation__inner-item(data-it-calculation-item='1')
+							label.it-calculation__label(for='fuel')
+								| Какой вид топлива Вас интересует?
+							select#fuel.it-calculation__select(name='fuel', required='')
+								option(value='', selected='', disabled='')
+									| выберите вид топлива
+								option(value='Бензин АИ-92, АИ-95, АИ-98')
+									| Бензин АИ-92, АИ-95, АИ-98
+								option(value='Дизель, дизель эко')
+									| Дизель, дизель эко
+								option(value='Газ - пропан, метан')
+									| Газ - пропан, метан
+							label.it-calculation__label(for='power')
+								| Какая мощность Вас интересует?
+							select#power.it-calculation__select(name='power', required='')
+								option(value='', selected='', disabled='')
+									| выберите мощность
+								option(value='0,7-18 кВт для домашнего использования')
+									| 0,7-18 кВт для домашнего использования
+								option(value='19-100 кВт для автомного снабжения дома или малого производства')
+									| 19-100 кВт для автомного снабжения дома
+									| или малого производства
+								option(value='100-1000 кВт для производства')
+									| 100-1000 кВт для производства
+								option(value='1000 2000 кВт для автомного снабжения баз')
+									| 1000-2000 кВт для автомного снабжения баз
+							.it-validate-error
+								| Заполните поля
+						.it-calculation__inner-item(data-it-calculation-item='2')
+							.it-calculation__subtitle
+								| Какой вариант исполнения нужен?
+							.it-calculation__inputs-wrap
+								.it-checkbox.it-calculation__checkbox
+									input#open.it-checkbox__input(type='checkbox', name='case1', value='Открытый')
+									label.it-checkbox__label(for='open')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label Открытый
+								.it-checkbox.it-calculation__checkbox
+									input#mini.it-checkbox__input(type='checkbox', name='case2', value='В мини-контейнере')
+									label.it-checkbox__label(for='mini')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label В мини-контейнере
+								.it-checkbox.it-calculation__checkbox
+									input#chassis.it-checkbox__input(type='checkbox', name='case3', value='На шасси')
+									label.it-checkbox__label(for='chassis')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label На шасси
+								.it-checkbox.it-calculation__checkbox
+									input#casing.it-checkbox__input(type='checkbox', name='case4', value='В шумопоглощающем кожухе')
+									label.it-checkbox__label(for='casing')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label В шумопоглощающем кожухе
+								.it-checkbox.it-calculation__checkbox
+									input#in-counteiner.it-checkbox__input(type='checkbox', name='case5', value='В контейнере')
+									label.it-checkbox__label(for='in-counteiner')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label В контейнере
+								.it-checkbox.it-calculation__checkbox
+									input#difficulty2.it-checkbox__input(type='checkbox', name='case6', value='Затрудняюсь в выборе')
+									label.it-checkbox__label(for='difficulty2')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label Затрудняюсь в выборе
+						.it-calculation__inner-item(data-it-calculation-item='3')
+							.it-calculation__subtitle
+								| Выберите дополнительные опции
+							.it-calculation__inputs-wrap
+								.it-checkbox.it-calculation__checkbox.it-calculation__checkbox--prompt(title='Запуск, при отключении основного источника питания (АВР)')
+									input#installation1.it-checkbox__input(type='checkbox', name='option1', value='Установка автоматического запуска')
+									label.it-checkbox__label(for='installation1')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label.it-calculation__checkbox-pseudo-label--prompt  Установка автоматического запуска
+								.it-checkbox.it-calculation__checkbox(title='Автодолив во избежание поломки')
+									input#fuel2.it-checkbox__input(type='checkbox', name='option2', value='Автоматическая подкачка топлива и уровня масла')
+									label.it-checkbox__label(for='fuel2')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label.it-calculation__checkbox-pseudo-label--prompt  Автоматическая подкачка топлива и уровня масла
+								.it-checkbox.it-calculation__checkbox(title='Гарантированный пуск до -60°C')
+									input#heating.it-checkbox__input(type='checkbox', name='option3', value='Предпусковой подогрев воздуха/двигателя/масленой системы')
+									label.it-checkbox__label(for='heating')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label.it-calculation__checkbox-pseudo-label--prompt  Предпусковой подогрев воздуха/двигателя/масленой системы
+								.it-checkbox.it-calculation__checkbox(title='Для продления длительности беспрерывной работы')
+									input#bulk.it-checkbox__input(type='checkbox', name='option4', value='Увеличение объема топливного бака')
+									label.it-checkbox__label(for='bulk')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label.it-calculation__checkbox-pseudo-label--prompt  Увеличение объема топливного бака
+								.it-checkbox.it-calculation__checkbox(title='Управление станцией по смс или через интернет: запуск/отключение, контроль остатка топлива, температуры, время наработки, и прочих данных')
+									input#monitoring.it-checkbox__input(type='checkbox', name='option5', value='Система удаленного мониторинга')
+									label.it-checkbox__label(for='monitoring')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label.it-calculation__checkbox-pseudo-label.it-calculation__checkbox-pseudo-label--prompt  Система удаленного мониторинга
+						.it-calculation__inner-item(data-it-calculation-item='4')
+							.it-calculation__subtitle.it-calculation__subtitle--indent
+								| После отправки заявки менеждер рассчитает, перезвонит
+								| и предложит варианты
+							.it-checkbox__input-wrap
+								input.it-callback__input.it-calculation__checkbox--size(name='NAME', maxlength='200', value='', placeholder='Ваше имя', required='')
+								input.it-callback__input.it-calculation__checkbox--size(type='tel', name='PHONE', maxlength='200', value='', placeholder='Ваш телефон', data-phone='true', required='')
+								input(type='hidden', name='FORM_NAME', value='test')
+								input(type='hidden', name='name')
+								input(type='hidden', name='phone')
+							.it-calculation__checkbox--center
+								.it-checkbox
+									input#agree1.it-checkbox__input(type='checkbox', name='agree', value='1', checked='', required='')
+									label.it-checkbox__label(for='agree1')
+										span.it-checkbox__control
+										span.it-checkbox__pseudo-label
+											| Подтверждаю свое согласие
+											br
+											|  на обработку персональных данных
+							// <div class="box-form__success">Спасибо! Ваша заявка принята.</div>
+					.it-calculation__buttons
+						button.it-btn.it-calculation__btn.it-calculation__btn--prev(type='button', data-it-btn='prev')
+							| Назад
+						button.it-btn.it-calculation__btn.it-calculation__btn--next.it-btn--arrow.active(type='button', data-it-btn='next')
+							| Далее
+						button.it-btn.it-calculation__btn.it-calculation__btn--send(type='submit', data-it-btn='send')
+							| Отправить
+					.it-form__success
+						| Спасибо!
+						br
+						|  Ваша заявка принята.

@@ -161,3 +161,79 @@ $(function () {
 /* ------------------- mask ------------------- */
 
 $("[data-phone]").mask("+7 (999) 99-99-999");
+
+
+/* ------------------- calculation ----------------------- */
+
+var stepCounter = 1;
+
+var stepNumeric = $("[data-it-step-numeric]");
+var lineInner = $("[data-it-line-inner]");
+var btnPrev = $("[data-it-btn='prev']");
+var btnNext = $("[data-it-btn='next']");
+var btnSend = $("[data-it-btn='send']");
+
+function calculation() {
+
+    $("[data-it-step-counter]").text(stepCounter);
+
+    $("[data-it-calculation-item]").hide();
+    $("[data-it-calculation-item='" + stepCounter + "']").show();
+
+
+    switch (stepCounter) {
+        case 1:
+            stepNumeric.text("25");
+            lineInner.css("width", "25%");
+            btnPrev.removeClass("active");
+            break;
+        case 2:
+            stepNumeric.text("50");
+            lineInner.css("width", "50%");
+            btnPrev.addClass("active");
+            break;
+
+        case 3:
+            stepNumeric.text("75");
+            lineInner.css("width", "75%");
+            btnPrev.addClass("active");
+            btnNext.addClass("active");
+            btnSend.removeClass("active");
+            break;
+
+        case 4:
+            stepNumeric.text("100");
+            lineInner.css("width", "100%");
+            btnNext.removeClass("active");
+            btnSend.addClass("active");
+            break;
+    }
+}
+
+
+btnNext.on("click", function (e) {
+    $(".it-validate-color").removeClass("it-validate-color");
+    $(".it-validate-error").removeClass("active");
+
+    $("[data-it-calculation-item='" + stepCounter + "'] [required]").each(function () {
+        var calcValidate = $(this).val();
+
+        if (calcValidate == null || calcValidate == "") {
+            $(this).addClass("it-validate-color");
+            $(".it-validate-error").addClass("active");
+
+        }
+    });
+
+    if (!$(".it-validate-error").hasClass("active")) {
+
+        stepCounter++;
+        calculation();
+    }
+});
+
+
+btnPrev.on("click", function (e) {
+    stepCounter--;
+    calculation();
+});

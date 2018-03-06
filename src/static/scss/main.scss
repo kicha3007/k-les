@@ -2,7 +2,13 @@
 @import '__mixins';
 @import 'card';
 @import "smart-grid";
-@import "othter-progects";
+@import "other-progects";
+@import "steps";
+
+
+@include font-face(HelveticaNeueCyr-Bold, fonts/HelveticaNeueCyr);
+@include font-face(HelveticaNeueCyr-Thin, fonts/HelveticaNeueCyr);
+@include font-face(HelveticaNeueCyr-Medium, fonts/HelveticaNeueCyr);
 
 
 /******************* it-all-style *******************/
@@ -24,8 +30,8 @@ body {
 }
 
 body * {
-  font-family: "Roboto", "Ubuntu", "Open Sans", "Lato", sans-serif;
-  color: rgba(0, 0, 0, 0.87);
+  font-family: "HelveticaNeueCyr", sans-serif;
+  color: #000000;
   line-height: 1.42;
   box-sizing: border-box;
 
@@ -158,8 +164,8 @@ body * {
   text-align: center;
   user-select: none;
   border: none;
-  padding: 16px 10px;
-  font-size: 14px;
+  padding: 12px 5px;
+  font-size: 13px;
   transition: all 0.2s ease-in-out;
   background-color: $main-color;
   color: #ffffff;
@@ -178,18 +184,19 @@ body * {
 
 .it-btn--transparent {
   background-color: transparent;
+  color: #000000;
   border: 1px solid $main-color;
 }
 
 .it-btn--transparent:hover {
-  background-color: $main-color-hover;
   border: 1px solid $main-color-hover;
+  color: #000000;
 }
 
 .it-btn--transparent:hover,
 .it-btn--transparent:active,
 .it-btn--transparent:visited {
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
 }
 
 
