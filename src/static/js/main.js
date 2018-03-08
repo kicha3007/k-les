@@ -175,7 +175,7 @@ var btnSend = $("[data-it-btn='send']");
 
 function calculation() {
 
-    $("[data-it-step-counter]").text(stepCounter);
+    $("[data-it-calculation-counter]").text(stepCounter);
 
     $("[data-it-calculation-item]").hide();
     $("[data-it-calculation-item='" + stepCounter + "']").show();
