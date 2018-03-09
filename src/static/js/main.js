@@ -256,3 +256,17 @@ calcSelectWrap.find(".it-checkbox__default").on("click", function () {
     }
 });
 
+
+/* ****************************** add-file ****************************** */
+
+// $(".it-callback__file").change(function () {
+//     var f_name = [];
+//
+//     for (var i = 0; i < $(this).get(0).files.length; ++i) {
+//         f_name.push(' ' + $(this).get(0).files[i].name);
+//     }
+//
+//     $(this).parent().find(".it-callback__file-name").text(f_name.join(', '));
+// });
+
+

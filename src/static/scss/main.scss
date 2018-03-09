@@ -4,6 +4,8 @@
 @import "smart-grid";
 @import "other-progects";
 @import "steps";
+@import "file-drop";
+@import "callback";
 
 
 @include font-face(HelveticaNeueCyr-Bold, fonts/HelveticaNeueCyr);
@@ -60,16 +62,17 @@ body * {
 //}
 
 .it-all-title {
-  padding-top: 70px;
+  padding-top: 80px;
   padding-bottom: 40px;
-  font-size: rem(35px);
+  font-size: rem(20px);
   line-height: 1.4;
   text-align: center;
   font-weight: 700;
   position: relative;
+  color: #000000;
   @include tablets {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
   @include phones {
     font-size: rem(32px);
@@ -79,14 +82,14 @@ body * {
 }
 
 .it-all-subtitle {
-  font-size: rem(24px);
+  font-size: rem(16px);
   font-weight: 300;
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .it-all-title + .it-all-subtitle {
-  margin-top: -10px;
+  margin-top: -25px;
 }
 
 //.it-all-title:before,
@@ -152,7 +155,10 @@ body * {
   @include size(3);
   @include size-md(12);
   padding-top: 60px;
+}
 
+.it-main-page__bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .it-btn {
