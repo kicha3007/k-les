@@ -1,0 +1,8 @@
+@import "__vars";
+@import "__mixins";
+@import "smart-grid";
+
+.file-field__button:hover .file-field__button-fake {
+  background-color: #e6e6e6;
+}
+

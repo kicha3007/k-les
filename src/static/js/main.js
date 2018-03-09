@@ -167,11 +167,12 @@ $("[data-phone]").mask("+7 (999) 99-99-999");
 
 var stepCounter = 1;
 
-var stepNumeric = $("[data-it-step-numeric]");
 var lineInner = $("[data-it-line-inner]");
 var btnPrev = $("[data-it-btn='prev']");
 var btnNext = $("[data-it-btn='next']");
 var btnSend = $("[data-it-btn='send']");
+var calcTitle = $("[data-calculation-title]");
+var calcSubTitle = $("[data-it-calculation-text]");
 
 function calculation() {
 
@@ -183,18 +184,19 @@ function calculation() {
 
     switch (stepCounter) {
         case 1:
-            stepNumeric.text("25");
+            calcSubTitle.text("Выберите материал для строительства");
             lineInner.css("width", "25%");
             btnPrev.removeClass("active");
             break;
         case 2:
-            stepNumeric.text("50");
+            calcSubTitle.text("Расскажите, какая степень постройки вас интересует");
             lineInner.css("width", "50%");
             btnPrev.addClass("active");
             break;
 
         case 3:
-            stepNumeric.text("75");
+            calcSubTitle.text("Что бы вы хотели добавить к проекту?");
+            calcTitle.text("Уточните комплектацию для расчета стоимости дома:");
             lineInner.css("width", "75%");
             btnPrev.addClass("active");
             btnNext.addClass("active");
@@ -202,7 +204,8 @@ function calculation() {
             break;
 
         case 4:
-            stepNumeric.text("100");
+            calcSubTitle.text("После отправки заявки менеждер рассчитает, перезвонит и предложит варианты");
+            calcTitle.text("Укажите данные для отправки");
             lineInner.css("width", "100%");
             btnNext.removeClass("active");
             btnSend.addClass("active");
@@ -237,3 +240,19 @@ btnPrev.on("click", function (e) {
     stepCounter--;
     calculation();
 });
+
+
+var calcSelectWrap = $(".it-steps__inner-half:has(.it-steps__checkbox +.it-steps__select-wrap)");
+
+calcSelectWrap.find(".it-checkbox__default").on("click", function () {
+
+    var thisCalcSelectWrap = $(this).closest(calcSelectWrap);
+    var thisCalcSelect = thisCalcSelectWrap.find(".it-steps__select");
+
+    if (thisCalcSelect.attr("disabled")) {
+        thisCalcSelect.removeAttr("disabled");
+    } else {
+        thisCalcSelect.attr("disabled", "1");
+    }
+});
+
