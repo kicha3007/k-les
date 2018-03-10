@@ -1,0 +1,108 @@
+@import "__vars";
+@import "__mixins";
+@import "smart-grid";
+
+.price-house__wrap {
+  padding: 5% 20px;
+  background-color: #F3EFEE;
+}
+
+.price-house__all-title {
+  font-size: rem(20px);
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.price-house__top {
+  overflow: hidden;
+}
+
+.price-house__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 -20px -20px;
+}
+
+.price-house__item {
+  margin: 0 20px 20px;
+  max-width: 78px;
+  width: 100%;
+  list-style-type: none;
+  padding-right: 0;
+}
+
+.price-house__img-box {
+  max-width: 78px;
+  width: 100%;
+  height: 78px;
+  margin-bottom: 15px;
+}
+
+.price-house__img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+}
+
+.price-house__title {
+  font-size: 14px;
+  font-weight: 300;
+  color: #333333;
+  text-align: center;
+}
+
+.it-price-house__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.it-price-house__bottom-half {
+  width: 50%;
+  @include phones {
+    width: 100%;
+  }
+}
+
+.it-price-house__bottom--left {
+  overflow: hidden;
+}
+
+.it-price-house__bottom--right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.it-price-house__bottom-title {
+  font-size: rem(18px);
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.it-price-house__bottom-subtitle {
+  font-size: rem(14px);
+  font-weight: 300;
+  color: #333333;
+}
+
+.it-price-house__input-title--hide {
+  @include tablets {
+
+  }
+}
+
+.it-price-house .it-price-house__buttons {
+  margin-top: auto;
+  max-height: 49px;
+  @include laptop {
+    flex-basis: 150px;
+    max-width: 252px;
+  }
+}

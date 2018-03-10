@@ -1,0 +1,132 @@
+section.it-tabs
+	.it-tabs__wrap
+		.it-tabs__nav-min(data-min-nav='')
+			.it-tabs__nav-min-title-wrap
+				span.it-tabs__nav-min-title(data-min-nav-title='') Маркетинг-менеджер
+			ul.it-tabs__nav-min-list(data-switch-wrap='', data-min-nav-dropdown='')
+				li.it-tabs__nav-min-item.active
+					a.it-tabs__nav-min-link(href='', data-switch='speaker1', data-min-nav-item='')
+						| Описание
+				li.it-tabs__nav-min-item
+					a.it-tabs__nav-min-link(href='', data-switch='speaker2', data-min-nav-item='')
+						| Гарантии
+				li.it-tabs__nav-min-item
+					a.it-tabs__nav-min-link(href='', data-switch='speaker3', data-min-nav-item='')
+						| Сроки
+				li.it-tabs__nav-min-item
+					a.it-tabs__nav-min-link(href='', data-switch='speaker4', data-min-nav-item='')
+						| Интерьер
+		ul.it-tabs__nav-wrap(data-switch-wrap='')
+			li.it-tabs__nav-item.active
+				a.it-tabs__nav-link(href='', data-switch='speaker1')
+					|	Описание
+			li.it-tabs__nav-item
+				a.it-tabs__nav-link(href='', data-switch='speaker2')
+					| Гарантии
+			li.it-tabs__nav-item
+				a.it-tabs__nav-link(href='', data-switch='speaker3')
+					| Сроки
+			li.it-tabs__nav-item
+				a.it-tabs__nav-link(href='', data-switch='speaker4')
+					| Интерьер
+		ul.it-tabs__list(data-tabs-wrap='')
+			li.it-tabs__item.active(data-tab='speaker1')
+				.it-tabs__content
+					.it-tabs__half.it-tabs__half--left
+						.it-tabs__other-title
+							| На первом этаже находятся:
+						ul.it-tabs__other-list.it-tabs__other-list--indent
+							li.it-tabs__other-item
+								|    гостиная, столовая, кухня, прихожая,
+							li.it-tabs__other-item
+								|    спальня, санузел, душевая, терраса,
+							li.it-tabs__other-item
+								|    техническое помещение, холл.
+
+						.it-tabs__other-title
+							| Дом из профилированного бруса (массив/клееный) с террасой.
+						ul.it-tabs__inner-list
+							li.it-tabs__inner-item
+								|    Площадь первого этажа:
+								span.it-tabs__number
+									|    116,76 м
+									sup
+										|    2
+							li.it-tabs__inner-item
+								|    Площадь второго этажа:
+								span.it-tabs__number
+									|    105,81 м
+									sup
+										|    2
+							li.it-tabs__inner-item
+								|    Площадь балконов и террас:
+								span.it-tabs__number
+									|    134,19 м
+									sup
+										|    2
+							li.it-tabs__inner-item
+								|    Площадь здания:
+								span.it-tabs__number
+									|    354,76 м
+									sup
+										|    2
+					.it-tabs__half.it-tabs__half--right
+
+						.it-tabs__other-title
+							| На втором этаже располагаются:
+						ul.it-tabs__other-list.it-tabs__other-list--indent
+							li.it-tabs__other-item
+								|    три спальных комнаты, второй свет,
+							li.it-tabs__other-item
+								|    холл, санузел, два балкона, гардероб.
+
+			li.it-tabs__item(data-tab='speaker2')
+				.it-tabs__content
+					.it-tabs__half.it-tabs__half--left
+
+						.it-tabs__other-title
+							| Гарантия 25 лет:
+						ul.it-tabs__other-list.it-tabs__other-list--indent
+							li.it-tabs__other-item
+								|    На фундамент
+							li.it-tabs__other-item
+								|    На стенокомплект и кровлю
+					.it-tabs__half.it-tabs__half--right
+						.it-tabs__img-box
+							img.it-tabs__img(src="static/img/card/tabs/1.jpg", alt='')
+			li.it-tabs__item(data-tab='speaker3')
+				.it-tabs__content
+					.it-tabs__half.it-tabs__half--left
+
+						.it-tabs__other-title
+							| Сроки строительства:
+						ul.it-tabs__other-list.it-tabs__other-list--indent
+							li.it-tabs__other-item
+								|    Дом из профилированного бруса - от 2,5 мес.
+							li.it-tabs__other-item
+								|    Дом из клееного бруса - от 1,5 мес.
+							li.it-tabs__other-item
+								|    Дом "под ключ" - от 5 мес.
+					.it-tabs__half.it-tabs__half--right
+						.it-tabs__img-box
+							img.it-tabs__img(src="static/img/card/tabs/2.jpg", alt='')
+			li.it-tabs__item(data-tab='speaker4')
+				.it-tabs__content
+					.it-tabs__half.it-tabs__half--left
+						.it-tabs__other-title
+							| Интерьерные решения
+						.it-tabs__text
+							p
+								|    Интерьер деревянного дома внутри может вовсе не напоминать материал, из коротого он выполнен. Стиль все чаще напоминает модерн, прованс.
+							p
+								|    Вы можете воплотить в жизнь любые идеи, как жить с комфортом. Можете заниматься саморазвитием и хобби, организовать себе досуг по душе, не выходя из дома!
+
+					.it-tabs__half.it-tabs__half--right
+						.it-tabs__img-box-slider
+							.it-tabs__img-box
+								img.it-tabs__img(src="static/img/card/tabs/3.png", alt='')
+							.it-tabs__img-box-preview-wrap
+								.it-tabs__img-box-preview
+									img(src="static/img/card/tabs/4.jpg", alt='').it-tabs__img
+								.it-tabs__img-box-preview
+									img(src="static/img/card/tabs/5.jpg", alt='').it-tabs__img

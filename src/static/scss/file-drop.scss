@@ -14,18 +14,24 @@
 .it-file-drop__wrap {
   justify-content: center;
   @include row-flex();
+  margin-bottom: -40px;
 }
 
 .it-file-drop__half--left {
   @include col();
   @include size(8);
-  @include size-md(12);
+  @include size-md(7);
+  @include size-sm(6);
+  @include size-xs(12);
+  margin-bottom: 40px;
 }
 
 .it-file-drop__half--right {
   @include col();
   @include size(4);
-  @include size-md(12);
+  @include size-md(5);
+  @include size-sm(6);
+  @include size-xs(12);
 
 }
 
@@ -39,12 +45,18 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
+  max-height: 552px;
+
 }
 
 .it-file-drop__img {
   display: block;
   height: 100%;
   width: auto;
+  @include phones {
+    height: auto;
+    max-width: 100%;
+  }
 }
 
 .it-file-drop .it-file-drop__callback-half {

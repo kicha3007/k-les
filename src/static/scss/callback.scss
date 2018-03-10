@@ -40,6 +40,7 @@
   color: rgba(0, 0, 0, 0.87);
   margin-bottom: 15px;
   margin-top: 10px;
+  min-height: 19px;
 }
 
 .it-callback__input-wrap {
@@ -63,7 +64,7 @@
   flex-basis: 150px;
   width: 100%;
   margin: 0 6px 10px;
-  max-width: 100%;
+  max-width: 252px;
 }
 
 
@@ -86,11 +87,17 @@
 .it-callback__input {
   border: 1px solid rgba(80, 66, 66, 0.2);
   font-size: 12px;
-  padding: 12px 20px;
+  padding: 10px 20px;
   color: rgba(0, 0, 0, 0.38);
   width: 100%;
   line-height: 1.42;
   border-radius: 2px;
+}
+
+.it-callback__buttons {
+  max-width: 130px;
+  width: 100%;
+  margin-top: auto;
 }
 
 
@@ -184,14 +191,17 @@
 
 .it-checkbox__text {
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.38);
   font-weight: 300;
   -ms-flex-preferred-size: 80px;
-  flex-basis: 80px;
+  flex-basis: 75px;
   width: 100%;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  @include phones {
+    word-wrap: break-word !important;
+  }
 }
 
 .it-callback__checkbox-wrap {
@@ -239,3 +249,6 @@
   margin-bottom: 20px;
 }
 
+.it-price-house__input-wrap {
+  margin-bottom: -20px;
+}

@@ -3,30 +3,79 @@
 @import "smart-grid";
 
 .other-progectss {
+  @include tablets {
+    padding: 0 30px;
+    margin: 0 auto;
+    max-width: 1180px;
+    width: 100%;
+  }
+
+}
+
+.other-progectss__wrap {
+  overflow: hidden;
 
 }
 
 .other-progects__list {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  justify-content: center;
+  @include tablets {
+      margin: 0 -10px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
 }
 
 .other-progects__item {
+
   padding: 0;
   list-style-type: none;
+  margin-bottom: 20px;
+  max-width: 250px;
+  width: 100%;
+  @include tablets {
+    margin: 0 10px 20px;
+    flex-basis: 180px;
+    flex-grow: 1;
+  }
+}
+
+.other-progects__person__list {
+  margin: 0;
+  padding: 0;
+
+
+}
+
+.other-progects__person-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+  max-width: 250px;
+  width: 100%;
+  @include tablets {
+      margin: 0 auto 40px;
+  }
+  
 }
 
 .other-progects__inner-item {
   text-decoration: none;
+
 }
 
 .other-progects__inner-item:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .other-progects__inner-item:active,
 .other-progects__inner-item:visited {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .other-progects__inner-item:hover .other-progects__img {
@@ -55,7 +104,7 @@
 }
 
 .other-progects__content {
-  padding: 15px 65px 15px 20px;
+  padding: 15px 25% 15px 10%;
   position: relative;
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -77,6 +126,19 @@
   text-align: center;
   line-height: 30px;
   font-weight: 300;
+  @include laptop {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    right: 6px;
+    font-size: 10px;
+  }
+  @include tablets {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .other-progects__item-title {
@@ -105,7 +167,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
 }
+
+.other-progects__person {
+  @include tablets {
+    width: 100%;
+  }
+}
+
+
+
+
 
 .other-progects__person-img {
   display: block;
@@ -114,7 +187,7 @@
 }
 
 .other-progects__person-content {
-  padding: 15px 20px 15px 20px;
+  padding: 15px 10% 15px 10%;
   position: relative;
   border-width: 0 1px 1px 1px;
   border-style: solid;
@@ -127,7 +200,6 @@
   margin-bottom: 20px;
 }
 
-
 .other-progects__person-subtitle {
   color: $main-color;
   font-size: 14px;
@@ -135,3 +207,4 @@
   margin-bottom: 20px;
 
 }
+

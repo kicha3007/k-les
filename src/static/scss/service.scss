@@ -1,0 +1,73 @@
+@import "__vars";
+@import "__mixins";
+@import "smart-grid";
+
+.service__list {
+  padding: 0;
+  margin: 0 0 -40px;
+  @include row-flex();
+  justify-content: space-between;
+  @include phones {
+    justify-content: center;
+  }
+
+}
+
+.service__item {
+  width: 100%;
+  @include col();
+  @include size(4);
+  @include size-sm(6);
+  @include size-xs(12);
+  list-style-type: none;
+  padding-left: 0;
+  overflow: hidden;
+  margin-bottom: 40px;
+  max-width: 310px;
+
+
+}
+
+.service__inner-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px -20px;
+  overflow: hidden;
+
+}
+
+.service__img-box {
+  max-width: 78px;
+  width: 100%;
+  height: 78px;
+  margin: 0 10px 20px;
+}
+
+.service__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.service__title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+.service__desc {
+  font-weight: 300;
+  font-size: 14px;
+  color: #333333;
+}
+
+
+.service__content {
+  margin: 0 10px 20px;
+  max-width: 210px;
+  width: 100%;
+  flex-basis: 170px;
+  flex-grow: 1;
+}

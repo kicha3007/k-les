@@ -1,5 +1,5 @@
 // --------------------- it-steps -------------------------
-section.it-steps.it-all--indent
+section.it-steps
 		.it-steps__wrap
 			.it-steps__title(data-calculation-title)
 				| Уточните комплектацию для расчета стоимости дома:
@@ -18,7 +18,7 @@ section.it-steps.it-all--indent
 								li.it-steps__half
 									.it-checkbox.it-steps__checkbox
 										label.it-checkbox
-											input.it-checkbox__default(type="checkbox" name="AGREE" checked)
+											input.it-checkbox__default(type="radio"  name="материал" checked)
 											span.it-checkbox__pseudo
 											span.it-checkbox__text
 												|	Клееный брус
@@ -27,7 +27,7 @@ section.it-steps.it-all--indent
 								li.it-steps__half
 									.it-checkbox.it-steps__checkbox
 										label.it-checkbox
-											input.it-checkbox__default(type="checkbox" name="AGREE" )
+											input.it-checkbox__default(type="radio"  name="материал" )
 											span.it-checkbox__pseudo
 											span.it-checkbox__text
 												|    Сухой проф.брус
@@ -43,7 +43,7 @@ section.it-steps.it-all--indent
 											img(src="static/img/steps/3.png", alt='').it-steps__img
 										.it-checkbox.it-steps__checkbox
 											label.it-checkbox
-												input.it-checkbox__default(type="checkbox" name="AGREE" checked)
+												input.it-checkbox__default(type="radio"  name="степень постройки" checked)
 												span.it-checkbox__pseudo
 												span.it-checkbox__text
 													|    Дом под ключ
@@ -53,7 +53,7 @@ section.it-steps.it-all--indent
 											img(src="static/img/steps/4.png", alt='').it-steps__img
 										.it-checkbox.it-steps__checkbox
 											label.it-checkbox
-												input.it-checkbox__default(type="checkbox" name="AGREE" )
+												input.it-checkbox__default(type="radio"  name="степень постройки" )
 												span.it-checkbox__pseudo
 												span.it-checkbox__text
 													|   Дом под кровлю
@@ -63,7 +63,7 @@ section.it-steps.it-all--indent
 											img(src="static/img/steps/5.png", alt='').it-steps__img
 										.it-checkbox.it-steps__checkbox
 											label.it-checkbox
-												input.it-checkbox__default(type="checkbox" name="AGREE" )
+												input.it-checkbox__default(type="radio"  name="степень постройки")
 												span.it-checkbox__pseudo
 												span.it-checkbox__text
 													|    Теплый контур
@@ -73,7 +73,7 @@ section.it-steps.it-all--indent
 											img(src="static/img/steps/6.png", alt='').it-steps__img
 										.it-checkbox.it-steps__checkbox
 											label.it-checkbox
-												input.it-checkbox__default(type="checkbox" name="AGREE" )
+												input.it-checkbox__default(type="radio"  name="степень постройки" )
 												span.it-checkbox__pseudo
 												span.it-checkbox__text
 													|    Стенокомплект
@@ -399,7 +399,7 @@ section.it-steps.it-all--indent
 								br
 								|  Ваша заявка принята.
 
-							.it-checkbox-wrap.it-callback__checkbox-wrap
+							.it-checkbox-wrap.it-callback__checkbox-wrap.it-steps__checkbox-wrap
 								label.it-checkbox
 									input.it-checkbox__default(type="checkbox" name="AGREE" checked)
 									span.it-checkbox__pseudo

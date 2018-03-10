@@ -1,0 +1,26 @@
+@import "__vars";
+@import "__mixins";
+@import "smart-grid";
+
+.it-video__list {
+  margin: 0;
+  padding: 0;
+  @include row-flex();
+}
+
+.it-video__item {
+  list-style-type: none;
+  padding-left: 0;
+  @include col();
+  @include size(4);
+  @include size-xs(12);
+  justify-content: space-between;
+  max-width: 290px;
+  width: 100%;
+}
+
+.it-video__buttons {
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -6,6 +6,10 @@
 @import "steps";
 @import "file-drop";
 @import "callback";
+@import "tabs";
+@import "price-house";
+@import "service";
+@import "video";
 
 
 @include font-face(HelveticaNeueCyr-Bold, fonts/HelveticaNeueCyr);
@@ -90,6 +94,9 @@ body * {
 
 .it-all-title + .it-all-subtitle {
   margin-top: -25px;
+  @include phones {
+    margin-top: -10px;
+  }
 }
 
 //.it-all-title:before,
@@ -145,7 +152,7 @@ body * {
 .it-main-page__left {
   @include col();
   @include size(9);
-  @include size-md(12);
+  @include size-sm(12);
 
 
 }
@@ -153,8 +160,11 @@ body * {
 .it-main-page__right {
   @include col();
   @include size(3);
-  @include size-md(12);
+  @include size-sm(12);
   padding-top: 60px;
+  @include tablets {
+    padding-top: 0;
+  }
 }
 
 .it-main-page__bottom {
