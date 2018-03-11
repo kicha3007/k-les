@@ -2,7 +2,7 @@
 @import "__mixins";
 @import "smart-grid";
 
-.other-progectss {
+.it-other-progectss {
   @include tablets {
     padding: 0 30px;
     margin: 0 auto;
@@ -12,12 +12,12 @@
 
 }
 
-.other-progectss__wrap {
+.it-other-progectss__wrap {
   overflow: hidden;
 
 }
 
-.other-progects__list {
+.it-other-progects__list {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -31,7 +31,7 @@
 
 }
 
-.other-progects__item {
+.it-other-progects__item {
 
   padding: 0;
   list-style-type: none;
@@ -45,14 +45,14 @@
   }
 }
 
-.other-progects__person__list {
+.it-other-progects__person__list {
   margin: 0;
   padding: 0;
 
 
 }
 
-.other-progects__person-item {
+.it-other-progects__person-item {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 20px;
@@ -64,31 +64,31 @@
   
 }
 
-.other-progects__inner-item {
+.it-other-progects__inner-item {
   text-decoration: none;
 
 }
 
-.other-progects__inner-item:hover {
+.it-other-progects__inner-item:hover {
   text-decoration: none;
 }
 
-.other-progects__inner-item:active,
-.other-progects__inner-item:visited {
+.it-other-progects__inner-item:active,
+.it-other-progects__inner-item:visited {
   text-decoration: none;
 }
 
-.other-progects__inner-item:hover .other-progects__img {
+.it-other-progects__inner-item:hover .it-other-progects__img {
   transform: scale(1.1);
 }
 
-.other-progects__title {
+.it-other-progects__title {
   font-weight: 700;
   font-size: rem(20px);
   margin-bottom: 20px;
 }
 
-.other-progects__img-box {
+.it-other-progects__img-box {
   max-height: 140px;
   overflow: hidden;
   display: flex;
@@ -96,14 +96,14 @@
   justify-content: center;
 }
 
-.other-progects__img {
+.it-other-progects__img {
   display: block;
   height: auto;
   max-width: 100%;
   transition: 0.2s;
 }
 
-.other-progects__content {
+.it-other-progects__content {
   padding: 15px 25% 15px 10%;
   position: relative;
   border-width: 0 1px 1px 1px;
@@ -112,7 +112,7 @@
 
 }
 
-.other-progects__content:before {
+.it-other-progects__content:before {
   content: '+';
   position: absolute;
   top: 20px;
@@ -141,27 +141,27 @@
   }
 }
 
-.other-progects__item-title {
+.it-other-progects__item-title {
   font-weight: 300;
   font-size: 12px;
   margin-bottom: 20px;
 
 }
 
-.other-progects__item-price {
+.it-other-progects__item-price {
   color: $main-color;
   font-size: 14px;
   font-weight: 700;
 
 }
 
-.other-progects__item-price span {
+.it-other-progects__item-price span {
   color: $main-color;
   font-size: 14px;
   font-weight: 700;
 }
 
-.other-progects__person-img-box {
+.it-other-progects__person-img-box {
   max-height: 190px;
   overflow: hidden;
   display: flex;
@@ -170,7 +170,7 @@
 
 }
 
-.other-progects__person {
+.it-other-progects__person {
   @include tablets {
     width: 100%;
   }
@@ -180,13 +180,13 @@
 
 
 
-.other-progects__person-img {
+.it-other-progects__person-img {
   display: block;
   height: auto;
   max-width: 100%;
 }
 
-.other-progects__person-content {
+.it-other-progects__person-content {
   padding: 15px 10% 15px 10%;
   position: relative;
   border-width: 0 1px 1px 1px;
@@ -194,13 +194,13 @@
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-.other-progects__person-title {
+.it-other-progects__person-title {
   font-weight: 300;
   font-size: rem(12px);
   margin-bottom: 20px;
 }
 
-.other-progects__person-subtitle {
+.it-other-progects__person-subtitle {
   color: $main-color;
   font-size: 14px;
   font-weight: 700;
